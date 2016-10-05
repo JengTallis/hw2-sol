@@ -61,7 +61,7 @@ Express the results for the relational algebra expressions:
 1. T1 × π<sub>A</sub>(T1)
 1. T1 ⨝<sub>T1.C=T2.D</sub> T2 
 1. T2 − (T1 ∩ T2)
-1. T2 ⨝<sub>T1.A<T2.B</sub> (σ<sub>B<=2</sub>(T2))
+1. T2 ⨝<sub>T1.A&lt;T2.B</sub> (σ<sub>B&lt;=2</sub>(T2))
 1. T1 ⨝ (σ<sub>D=c</sub>(T2))
 
 
