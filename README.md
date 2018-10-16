@@ -125,14 +125,6 @@ OR
 ```
 select * from student cross join (select age from student);
 ```
-OR
-```
-select distinct * from student, (select age from student);
-```
-OR
-```
-select distinct * from student cross join (select age from student);
-```
 
 3. Student ⨝<sub>Student.name=Teacher.name</sub> Teacher 
 
