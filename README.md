@@ -137,6 +137,10 @@ select * from student, teacher on student.name=teacher.name
 ```
 OR
 ```
+select * from student join/inner join/cross join teacher on student.name=teacher.name
+```
+OR
+```
 select * from student natural join teacher
 ```
 
@@ -144,7 +148,7 @@ select * from student natural join teacher
 
 ```
 select * from student
-except
+except/except all/minus
 (select * from(
 	(select * from student)
 	intersect
@@ -166,6 +170,22 @@ where
 	student.year=2018 
 	and student.age<teacher.age 
 	and student.name="engene"
+```
+OR
+```
+select * from
+(select * from student where student.year='2018') S
+cross join/inner join/join
+(select * from teacher where teacher.name='engene') T
+where S.age < T.age
+```
+OR
+```
+select * from
+(select * from student where student.year='2018') S
+,
+(select * from teacher where teacher.name='engene') T
+where S.age < T.age
 ```
 
 6. Student ⨝ (σ<sub>age&lt;=50</sub>(Teacher))
