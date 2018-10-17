@@ -28,8 +28,8 @@ Construct relational algebra for the following queries:
 * **Q2**: Find the names of manufacturers that sold at least three different liquors during the month of January in "Marshall" county.
 	* $\rho$(S(liquors$\rightarrow$lid), $\Pi$liquors($\sigma$month="January" $\wedge$ county="Marshall" $\wedge$ quantity>0(sales))
 	* $\rho$(Liq, $\Pi$lid, manufacturer(S $\bowtie$ liquors)
-	-   $\rho$(M(1$\rightarrow$lid1, 3$\rightarrow$lid2), Liq $\bowtie$manufacturer  Liq)
-	-   $\Pi$manufacturer($\sigma$lid1$\neq$lid2(M))
+	- $\rho$(M(1$\rightarrow$lid1, 3$\rightarrow$lid2, 5$\rightarrow$lid3), Liq $\bowtie$manufacturer Liq $\bowtie$manufacturer Liq)
+	- $\Pi$manufacturer($\sigma$lid1$\neq$lid2 $\wedge$ lid2$\neq$lid3 $\wedge$ lid1$\neq$lid3 (M))
 
 
 
