@@ -86,8 +86,8 @@ Write the result table for the relational algebra expressions:
 |A | B | C | B | C | D
 |---|---|---|---|---|---|
 |1 | x | a | 1 | x | c |
-|2 | y | b | 2 | x | a | 
-|2 | z | c | 2 | y | c |
+|1 | x | a | 3 | x | a | 
+|2 | y | b | 2 | y | c |
 
 4. T1 − (T1 ∩ T2)
 
