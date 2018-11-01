@@ -190,8 +190,8 @@ where S.age < T.age
 
 6. Student ⨝ (σ<sub>age&lt;=50</sub>(Teacher))
 ```
-select * from 
-student, (select * from teacher where age <= 50);
+select * 
+from student natural join (select * from teacher where age <= 50);
 ```
 OR
 ```
