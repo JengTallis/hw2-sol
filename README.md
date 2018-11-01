@@ -193,10 +193,5 @@ where S.age < T.age
 select * 
 from student natural join (select * from teacher where age <= 50);
 ```
-OR
-```
-select * from 
-student cross join (select * from teacher where age <= 50);
-```
 
 
